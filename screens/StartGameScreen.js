@@ -28,6 +28,14 @@ const styles = StyleSheet.create({
     width: 300,
     maxWidth: '80%',
     alignItems: 'center',
+    shadowColor: 'black', // shadow properties only work on iOS
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 6,
+    shadowOpacity: 0.26,
+    elevation: 5, // Android only
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
   },
   screen: {
     flex: 1,
