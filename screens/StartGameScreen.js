@@ -6,11 +6,14 @@ import Colors from '../constants/colors';
 import Input from '../components/Input';
 
 const StartGameScreen = props => {
-
   const [enteredValue, setEnteredValue] = useState('');
 
   const numperInputHandler = inputText => {
     setEnteredValue(inputText.replace(/[^0-9]/g, ''));
+  };
+
+  const resetInputHandler = () => {
+    setEnteredValue('');
   };
 
   return (
@@ -33,7 +36,11 @@ const StartGameScreen = props => {
           />
           <View style={styles.buttonContainer}>
             <View style={styles.button} >
-              <Button title='Reset' color={Colors.accent} onPress={() => {}}/>
+              <Button 
+                title='Reset' 
+                color={Colors.accent} 
+                onPress={resetInputHandler}
+              />
             </View> 
             <View style={styles.button} >
               <Button title='Confirm' color={Colors.primary} onPress={() => {}}/>
