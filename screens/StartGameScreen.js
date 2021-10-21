@@ -29,6 +29,12 @@ const StartGameScreen = props => {
     setEnteredValue('');
   };
 
+  let confirmedOutput;
+
+  if (confirmed) {
+    confirmedOutput = <Text>Chosen Number: {selectedNumber}</Text>
+  }
+
   return (
     // wrap the screen in TouchableWithoutFeedback since iOS doesn't have a way to dismiss the keyboard from the keyboard like Android does
     <TouchableWithoutFeedback onPress={() => {
@@ -64,6 +70,7 @@ const StartGameScreen = props => {
             </View>
           </View>
         </Card>
+        {confirmedOutput}
       </View>
     </TouchableWithoutFeedback>
   );
