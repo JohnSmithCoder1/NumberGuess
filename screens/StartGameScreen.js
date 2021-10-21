@@ -28,12 +28,14 @@ const StartGameScreen = props => {
         'Please enter a number between 1 and 99.', 
         [{text: 'OK', style: 'destructive', onPress: resetInputHandler()}]
       );
+
       return;
     }
+
     setConfirmed(true);
     setSelectedNumber(chosenNumber);
     setEnteredValue('');
-    Keyboard.dismiss;
+    Keyboard.dismiss();
   };
 
   let confirmedOutput;
@@ -41,9 +43,9 @@ const StartGameScreen = props => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.summaryContainer}>
-        <Text>You selected</Text>
+        <Text>Your number is</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button title='START NEW GAME' onPress={() => props.onStartGame(selectedNumber)}/>
+        <Button title='START GAME' onPress={() => props.onStartGame(selectedNumber)} />
       </Card>
     );
   }
