@@ -1,12 +1,14 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
+import BodyText from '../components/BodyText';
+
 const GameOverScreen = props => {
   return (
     <View style={styles.screen}>
-      <Text>Aha! I got it!</Text>
-      <Text>Your number is {props.userNumber}.</Text>
-      <Text>It only took me {props.numberOfRounds} guesses!</Text>
+      <BodyText>Aha! I got it!</BodyText>
+      <BodyText>Your number is {props.userNumber}.</BodyText>
+      <BodyText>It only took me {props.numberOfRounds} guesses!</BodyText>
       <View style={styles.buttonContainer} >
         <Button title="Try Again" onPress={props.onRestart} />
       </View>

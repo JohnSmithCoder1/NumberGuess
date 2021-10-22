@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Alert, Button, Keyboard, StyleSheet, Text, TouchableWithoutFeedback, View } from 'react-native';
 
+import BodyText from '../components/BodyText';
 import Card from '../components/Card';
 import Colors from '../constants/colors';
 import Input from '../components/Input';
@@ -43,9 +44,9 @@ const StartGameScreen = props => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.summaryContainer}>
-        <Text>You picked</Text>
+        <BodyText>You picked</BodyText>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Text>I won't tell. :)</Text>
+        <BodyText>I won't tell. :)</BodyText>
         <Button title='START GAME' onPress={() => props.onStartGame(selectedNumber)} />
       </Card>
     );
@@ -59,7 +60,7 @@ const StartGameScreen = props => {
       <View style={styles.screen}>
         <Text style={styles.title}>Can you stump the Number Guesser?</Text>
         <Card style={styles.inputContainer}>
-          <Text>Pick a number between 1 and 99.</Text>
+          <BodyText>Pick a number between 1 and 99.</BodyText>
           <Input 
             style={styles.input} 
             blurOnSubmit 
@@ -121,7 +122,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 18,
+    fontSize: 16,
+    fontFamily: 'open-sans-bold',
     marginVertical: 10,
   },
 });
