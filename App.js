@@ -10,7 +10,7 @@ import StartGameScreen from './screens/StartGameScreen';
 // add constants/functions outside of the functional app component if they don't need to be rerendered on every rerender cycle
 const fetchFonts = () => {
   Font.loadAsync({
-    'open-sans': require('./assets/fonts/OpenSans-Bold.ttf'),
+    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
   });
 };
