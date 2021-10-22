@@ -11,8 +11,6 @@ const NumberContainer = props => {
   );
 };
 
-
-
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
