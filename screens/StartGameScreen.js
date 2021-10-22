@@ -24,9 +24,9 @@ const StartGameScreen = props => {
     const chosenNumber = parseInt(enteredValue);
     if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber > 99) {
       Alert.alert(
-        'Invalid Input', 
-        'Please enter a number between 1 and 99.', 
-        [{text: 'OK', style: 'destructive', onPress: resetInputHandler()}]
+        'Not so fast!', 
+        'I said it had to be a number between 1 and 99.', 
+        [{text: 'Alright Alright', style: 'destructive', onPress: resetInputHandler()}]
       );
 
       return;
@@ -43,8 +43,9 @@ const StartGameScreen = props => {
   if (confirmed) {
     confirmedOutput = (
       <Card style={styles.summaryContainer}>
-        <Text>Your number is</Text>
+        <Text>You picked</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
+        <Text>I won't tell. :)</Text>
         <Button title='START GAME' onPress={() => props.onStartGame(selectedNumber)} />
       </Card>
     );
@@ -56,9 +57,9 @@ const StartGameScreen = props => {
       Keyboard.dismiss();
     }}>
       <View style={styles.screen}>
-        <Text style={styles.title}>Start a New Game!</Text>
+        <Text style={styles.title}>Can you stump the Number Guesser?</Text>
         <Card style={styles.inputContainer}>
-          <Text>Select a Number</Text>
+          <Text>Pick a number between 1 and 99.</Text>
           <Input 
             style={styles.input} 
             blurOnSubmit 
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 18,
     marginVertical: 10,
   },
 });
