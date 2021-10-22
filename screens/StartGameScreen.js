@@ -26,7 +26,7 @@ const StartGameScreen = props => {
       Alert.alert(
         'Not so fast!', 
         'I said it had to be a number between 1 and 99.', 
-        [{text: 'Alright Alright', style: 'destructive', onPress: resetInputHandler()}]
+        [{text: 'Alright Alright', style: 'default', onPress: resetInputHandler()}]
       );
 
       return;

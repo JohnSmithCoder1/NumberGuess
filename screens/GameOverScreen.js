@@ -8,7 +8,7 @@ const GameOverScreen = props => {
       <Text>Your number is {props.userNumber}.</Text>
       <Text>It only took me {props.numberOfRounds} guesses!</Text>
       <View style={styles.buttonContainer} >
-        <Button title="Try Again?" onPress={props.onRestart} />
+        <Button title="Try Again" onPress={props.onRestart} />
       </View>
     </View>
   );
