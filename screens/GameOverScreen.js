@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Alert, Button, StyleSheet, Text, View } from 'react-native';
-import GameScreen from './GameScreen';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const GameOverScreen = props => {
   return (
     <View>
-      <Text>AHA! I got it.</Text>
+      <Text>Aha! I got it.</Text>
     </View>
   );
 };
