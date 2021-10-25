@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Image, StyleSheet, Text, View } from 'react-native';
 
 import BodyText from '../components/BodyText';
+import Colors from '../constants/colors';
 import DefaultStyles from '../constants/default-styles';
 
 const GameOverScreen = props => {
@@ -17,8 +18,7 @@ const GameOverScreen = props => {
           resizeMode='cover'
         />
       </View>
-      <BodyText>Your number is {props.userNumber}.</BodyText>
-      <BodyText>It only took me {props.numberOfRounds} guesses!</BodyText>
+      <BodyText style={styles.resultsText}>Your number is <Text style={styles.highlight}>{props.userNumber}</Text>. It only took me <Text style={styles.highlight}>{props.numberOfRounds}</Text> guesses!</BodyText>
       <View style={styles.buttonContainer} >
         <Button title="Try Again" onPress={props.onRestart} />
       </View>
@@ -29,6 +29,10 @@ const GameOverScreen = props => {
 const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: 10,
+  },
+  highlight: {
+    color: Colors.primary,
+    fontFamily: 'open-sans-bold',
   },
   image: {
     width: '100%',
@@ -43,6 +47,9 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     overflow: 'hidden',
     marginVertical: 30,
+  },
+  resultsText: {
+    fontSize: 16,
   },
   screen: {
     flex: 1,
