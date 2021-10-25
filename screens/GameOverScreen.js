@@ -12,8 +12,8 @@ const GameOverScreen = props => {
       <View style={styles.imageContainer}>
         <Image 
           style={styles.image} 
-          source={{uri: 'https://media.wired.com/photos/5e3246cd56bcac00087f0a1e/1:1/w_1329,h_1329,c_limit/Culture-Success-Meme-Kid.jpg'}}
-          // source={require('../assets/success.png')} 
+          // source={{uri: 'https://media.wired.com/photos/5e3246cd56bcac00087f0a1e/1:1/w_1329,h_1329,c_limit/Culture-Success-Meme-Kid.jpg'}}
+          source={require('../assets/success.png')} 
           // cover is the default value, but leaving this here to show how to change it
           resizeMode='cover'
         />
